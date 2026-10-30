@@ -1,0 +1,16 @@
+Options -Indexes
+DirectoryIndex index.php
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+# Pasa el encabezado Authorization a PHP (API con token Bearer)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP:Authorization} .
+  RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+</IfModule>
+<FilesMatch "\.(sql|log|md|example\.php)$">
+  Require all denied
+</FilesMatch>

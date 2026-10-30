@@ -1,0 +1,21 @@
+body { background: #f4f6f9; }
+.bg-primary-dark { background: #1f4e79 !important; }
+.card { border: 0; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+.card-header { background: #fff; font-weight: 600; }
+.kpi .valor { font-size: 2rem; font-weight: 700; color: #1f4e79; }
+.kpi .etiqueta { color: #6c757d; font-size: .85rem; text-transform: uppercase; }
+.table thead th { background: #eef3f8; white-space: nowrap; }
+.public-body { background: #f4f6f9 linear-gradient(180deg, #1f4e79 0, #1f4e79 220px, #f4f6f9 220px) no-repeat; min-height: 100vh; }
+.public-container { max-width: 860px; }
+.public-card { border-radius: 12px; }
+.otp-input { font-size: 2rem; letter-spacing: .6rem; text-align: center; font-weight: 700; }
+.pregunta { border-left: 4px solid #2e75b6; background: #fff; padding: 1rem; margin-bottom: .75rem; border-radius: 6px; }
+.pregunta.falta { border-left-color: #dc3545; background: #fff5f5; }
+.escala-opciones { display: flex; flex-wrap: wrap; gap: .5rem; }
+.escala-opciones label { flex: 1 1 110px; border: 1px solid #ced4da; border-radius: 6px; padding: .5rem; text-align: center; cursor: pointer; background: #fff; font-size: .9rem; }
+.escala-opciones input { display: none; }
+.escala-opciones input:checked + span { font-weight: 700; color: #fff; }
+.escala-opciones label:has(input:checked) { background: #1f4e79; border-color: #1f4e79; color: #fff; }
+.guardado { font-size: .85rem; }
+.chart-box { position: relative; height: 320px; }
+@media print { nav, footer, .no-print { display: none !important; } body { background: #fff; } }
